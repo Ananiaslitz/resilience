@@ -1,0 +1,19 @@
+{
+    "name": "ananiaslitz/resilience",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Resilience\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Diego Ananias",
+            "email": "diegohsananias@gmail.com"
+        }
+    ],
+    "require": {
+        "leocarmo/circuit-breaker-php": "^5.0"
+    }
+}
