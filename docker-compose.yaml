@@ -1,0 +1,24 @@
+services:
+  php:
+    build: ./.docker
+    volumes:
+      - .:/app
+    working_dir: /app
+    tty: true
+    stdin_open: true
+    command: bash
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:7
+    container_name: redis_server
+    ports:
+      - "6379:6379"
+
+  composer:
+    image: composer:latest
+    container_name: composer_service
+    volumes:
+      - .:/app
+    working_dir: /app

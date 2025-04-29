@@ -4,7 +4,8 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Resilience\\": "src/"
+            "Resilience\\": "src/",
+            "Resilience\\Tests\\": "tests/"
         }
     },
     "authors": [
@@ -14,6 +15,14 @@
         }
     ],
     "require": {
-        "leocarmo/circuit-breaker-php": "^5.0"
+        "leocarmo/circuit-breaker-php": "^5.0",
+        "predis/predis": "^2.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.4",
+        "mockery/mockery": "^1.6"
+    },
+    "scripts": {
+        "tests": "docker compose run --rm php ./vendor/bin/phpunit --testdox"
     }
 }
