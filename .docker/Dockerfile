@@ -19,6 +19,5 @@ RUN apt-get install -y \
     && echo "extension=pcov.so" > /usr/local/etc/php/conf.d/pcov.ini \
     && echo "pcov.enabled=1" >> /usr/local/etc/php/conf.d/pcov.ini
 
-
 WORKDIR /app
 COPY . /app

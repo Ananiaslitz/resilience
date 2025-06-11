@@ -1,0 +1,5 @@
+composer-setup.php
+composer.phar
+./vendor
+./.idea
+/vendor
